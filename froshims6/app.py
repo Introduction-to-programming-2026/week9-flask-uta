@@ -21,7 +21,6 @@ def index():
 
 @app.route("/deregister", methods=["POST"])
 def deregister():
-
     # Forget registrant
     id = request.form.get("id")
     if id:
@@ -31,7 +30,6 @@ def deregister():
 
 @app.route("/register", methods=["POST"])
 def register():
-
     # Validate name
     name = request.form.get("name")
     if not name:
@@ -55,3 +53,6 @@ def register():
 def registrants():
     registrants = db.execute("SELECT * FROM registrants")
     return render_template("registrants.html", registrants=registrants)
+
+if __name__ == "__main__":
+    app.run(debug=True)
