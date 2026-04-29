@@ -13,8 +13,8 @@
         <tbody>
             {% for registrant in registrants %}
                 <tr>
-                    <td>{{ registrant["name"] }}</td>
-                    <td>{{ registrant["sport"] }}</td>
+                    <td>{{ registrant.name }}</td>
+                    <td>{{ registrant.sport }}</td>
                     <td>
                         <form action="/deregister" method="post">
                             <input name="id" type="hidden" value="{{ registrant.id }}">

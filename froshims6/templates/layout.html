@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+{% extends "layout.html" %}
 
-<html lang="en">
-
-    <head>
-        <meta name="viewport" content="initial-scale=1, width=device-width">
-        <title>froshims</title>
-    </head>
-
-    <body>
-        {% block body %}{% endblock %}
-    </body>
-
-</html>
+{% block body %}
+    <h1>Register</h1>
+    <form action="/register" method="post">
+        <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
+        {% for sport in sports %}
+            <label>
+                <input name="sport" type="radio" value="{{ sport }}"> {{ sport }}
+            </label>
+        {% endfor %}
+        <button type="submit">Register</button>
+    </form>
+{% endblock %}
