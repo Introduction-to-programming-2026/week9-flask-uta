@@ -1,10 +1,16 @@
 <!-- TODO: Add the DOCTYPE declaration -->
-
+<!DOCTYPE html>
 <!-- TODO: Open the <html> tag with lang="en" -->
-
+<html lang="en">
     <!-- TODO: Add a <head> section with a viewport <meta> tag and a <title> -->
-
+<head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>froshims0</title>
+    </head>
     <!-- TODO: Add a <body> section that contains a Jinja2 block named "body"
                so child templates can inject their content here -->
-
+<body>
+        {% block body %}{% endblock %}
+    </body>
 <!-- TODO: Close the </html> tag -->
+</html>
